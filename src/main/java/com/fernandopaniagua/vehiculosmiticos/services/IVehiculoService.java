@@ -6,4 +6,5 @@ import com.fernandopaniagua.vehiculosmiticos.entities.Vehiculo;
 
 public interface IVehiculoService {
 	public List<Vehiculo> findAll();
+	public List<Vehiculo> findAllByMarca(String marca);
 }

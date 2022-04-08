@@ -19,4 +19,10 @@ public class VehiculoServiceImpl implements IVehiculoService{
 		List<Vehiculo> vehiculos = vehiculosRepo.findAll();
 		return vehiculos;
 	}
+	
+	@Override
+	public List<Vehiculo> findAllByMarca(String marca){
+		List<Vehiculo> vehiculos = vehiculosRepo.findAllByMarca(marca);
+		return vehiculos;
+	}
 }

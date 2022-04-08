@@ -27,9 +27,17 @@ class VehiculosmiticosApplicationTests {
 		}
 	}
 	
-	@Test
+	
 	void findAllVehiculosServicio() {
 		List<Vehiculo> vehiculos = vehiculosService.findAll();	
+		for (Vehiculo vehiculo : vehiculos) {
+			System.out.println(vehiculo.getNombre());
+		}
+	}
+	
+	@Test
+	void findAllVehiculosServicioByMarca() {
+		List<Vehiculo> vehiculos = vehiculosService.findAllByMarca("Nissan");	
 		for (Vehiculo vehiculo : vehiculos) {
 			System.out.println(vehiculo.getNombre());
 		}
