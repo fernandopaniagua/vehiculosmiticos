@@ -25,4 +25,11 @@ public class VehiculoServiceImpl implements IVehiculoService{
 		List<Vehiculo> vehiculos = vehiculosRepo.findAllByMarca(marca);
 		return vehiculos;
 	}
+
+	@Override
+	public void Save(Vehiculo v) {
+		vehiculosRepo.save(v);
+	}
+
+	
 }
