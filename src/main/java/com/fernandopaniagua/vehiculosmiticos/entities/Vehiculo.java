@@ -1,12 +1,14 @@
 package com.fernandopaniagua.vehiculosmiticos.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity(name="vehiculos")
-public class Vehiculo {
+public class Vehiculo implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -57,7 +59,5 @@ public class Vehiculo {
 	public void setImagen(String imagen) {
 		this.imagen = imagen;
 	}
-	
-	
 
 }
